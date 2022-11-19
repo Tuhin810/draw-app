@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serifS;
+}
+html{
+    background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #2B86C5 0%, #784BA0 50%, #f94faf 100%);
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #2B86C5 0%, #784BA0 50%, #f94faf 100%);
+
+
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 74rem;
+    gap: 20px;
+    padding: 10px;
+
+
+    
+}
+section{
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.tools-board{
+    
+    width: 210px;
+    padding: 15px 22px 0;
+    text-align: left;
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+
+
+    
+}
+.tools-board .row{
+    margin-bottom: 20px;
+}
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+    cursor:pointer;
+}
+.row .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    cursor:pointer;
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+.option:is(:hover,.active) span{
+    /* filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) hue-rotate(9000deg) contrast(100%); */
+    color: orangered;
+    font-weight: 900;
+}
+.option :where(span,label){
+    color: #5a6168;
+    padding-left:10px;
+    cursor:pointer;
+
+}
+label{
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+#fill-color:checked ~label{
+    color: #2B86C5;
+    
+}
+.option #fill-color{
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+}
+#fill :where(label){
+    margin-top: 15px;
+}
+
+.option  #size-slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    
+}
+.colors .options{
+    display:flex;
+    cursor: pointer;
+    
+    
+}
+.colors .option{
+    height: 20px;
+    width: 20px;
+    
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+.colors .option:nth-child(1){
+    background-color: white;
+    border: 1px solid black;
+
+}
+.colors .option:nth-child(2){
+    background-color: black;
+}
+.colors .option:nth-child(3){
+   background-color: red;
+    
+}
+.colors .option:nth-child(4){
+    background-color: yellow;
+    
+}
+.colors .option:nth-child(5){
+    background-color: green;
+    
+}
+.colors .option:nth-child(6){
+   background: transparent;
+   
+}
+
+.colors .option.selected::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 5px solid rgb(0, 0, 0);
+    transform: translate(-50%,-50%);
+}
+.colors .option:first-child.selected::before{
+    border-color: #2B86C5;
+}
+
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.option #color-picker{
+    
+background-image: linear-gradient(90deg, #004ede 0%, #ff0084 100%);
+
+    cursor: pointer;
+    
+    margin: 0px -23px 0px -7px ;
+    
+    
+    
+    position: relative;
+   
+    
+}
+
+
+.buttons button{
+    background-image: linear-gradient(to right, #d402fe 0%, #8000f1  51%, #cb00f4  100%);
+    margin: 3px;
+    padding: 1px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px rgba(238, 238, 238, 0.313);
+    border-radius: 10px;
+    display: block;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+             
+     
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+.drawing-board{
+    flex: 1;
+   
+}
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+
+.logo{
+    position: absolute;
+    top: 9%;
+    left: 86%;
+}
+.logo img{
+    height: 145px;
+    width: 120px;
+    border-radius: 30%;
+}
